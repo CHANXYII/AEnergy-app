@@ -239,18 +239,6 @@ if "Dashboard" in menu:
 
             st.markdown('</div>', unsafe_allow_html=True)
 
-            # Chart
-            #chart_data = pd.DataFrame({
-            #    "Source": ["Math Formula", "AI Prediction"],
-            #    "Value": [base_cost, predicted_cost]
-            #})
-            #fig = px.bar(chart_data, x="Value", y="Source", orientation='h', color="Source",
-            #             color_discrete_map={"Math Formula": "#B6FFCA", "AI Prediction": "#FF7091"})
-            #fig.update_layout(height=200, showlegend=False, paper_bgcolor='rgba(0,0,0,0)', 
-            #                  plot_bgcolor='rgba(0,0,0,0)', font=dict(family="DM Sans", color="#D23669"))
-            #st.plotly_chart(fig, use_container_width=True)
-            #st.markdown('</div>', unsafe_allow_html=True)
-
 # AI Center
 else:
     st.markdown("# การจัดการข้อมูล AI")
@@ -260,8 +248,8 @@ else:
         with st.form("data_form", clear_on_submit=True):
             c1, c2, c3 = st.columns(3)
             with c1: w_in = st.number_input("Wattage", min_value=10)
-            with c2: h_in = st.number_input("Hours/Day", min_value=0.5)
-            with c3: d_in = st.number_input("Days/Month", min_value=1, max_value=31)
+            with c2: h_in = st.number_input("Hours", min_value=0.5)
+            with c3: d_in = st.number_input("Days", min_value=1, max_value=31)
             
             c4, c5 = st.columns([1, 2])
             with c4: e_in = st.selectbox("Label", [1,2,3,4,5], index=4)
