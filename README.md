@@ -68,8 +68,3 @@ Then, visit `http://localhost:8501` in your browser.
 - `collected_data.csv`: Historical dataset for training.
 - `model.pkl`: Serialized Random Forest model.
 - `requirements.txt`: Project dependencies.
-
----
-
-## ⚖️ License
-© 2026 AEnergy Platform | B2B Precision AI Engine
