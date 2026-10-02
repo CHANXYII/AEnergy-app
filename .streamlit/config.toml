@@ -1,0 +1,25 @@
+[theme]
+base = "light"
+primaryColor = "#BE185D"
+backgroundColor = "#FAFAFA"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1E293B"
+linkColor = "#BE185D"
+font = "sans-serif"
+baseRadius = "0.75rem"
+
+# Streamlit's own light/dark switch (⋮ → Settings) drives these. ui/theme.py
+# reads st.context.theme.type and matches the custom CSS and Plotly charts to
+# whichever one is active.
+[theme.dark]
+primaryColor = "#F472B6"
+backgroundColor = "#0F172A"
+secondaryBackgroundColor = "#1E293B"
+textColor = "#F1F5F9"
+linkColor = "#F9A8D4"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aenergy"
+version = "2.0.0"
+description = "Predict the monthly electricity cost of home appliances against Thailand's progressive residential tariff."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.49",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "plotly>=5.18",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+# Enables the OLS trendline on the Insights scatter plot.
+charts = ["statsmodels>=0.14"]
+
+[tool.setuptools.packages.find]
+where = ["apps"]
+
+[tool.pytest.ini_options]
+# Put apps/ on the path so the suite runs straight from a clone, with or
+# without an editable install.
+pythonpath = ["apps"]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning:streamlit.*"]
